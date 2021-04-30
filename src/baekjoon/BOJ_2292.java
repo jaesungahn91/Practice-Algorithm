@@ -8,21 +8,18 @@ public class BOJ_2292 {
 
         int N = sc.nextInt();
         int blockNum = 1;
-        int result = 1;
+        int cnt = 1;
 
-        if (N != 1){
-            result = 2;
-            blockNum = 6;
+        while (N != 1) {
 
-            while (true) {
-                if(blockNum >= N){
-                    break;
-                }
-                blockNum *= 3;
-                result++;
+            blockNum += ((cnt-1)*6);
+            if (N <= blockNum) {
+                break;
             }
+            cnt++;
         }
-        System.out.println(result);
+
+        System.out.println(cnt);
         sc.close();
     }
 }
