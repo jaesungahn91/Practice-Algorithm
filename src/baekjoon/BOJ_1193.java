@@ -24,6 +24,7 @@ public class BOJ_1193 {
             bunmo = X - (sum - maxNum);
             bunja = sum - X + 1;
         }
+
         System.out.println(bunja+"/"+bunmo);
     }
 }
