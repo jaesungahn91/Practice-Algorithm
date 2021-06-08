@@ -13,7 +13,5 @@ public class BOJ_10250 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-
-        
     }
 }
