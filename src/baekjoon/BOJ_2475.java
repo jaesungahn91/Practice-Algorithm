@@ -11,12 +11,19 @@ public class BOJ_2475 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        /*StringTokenizer st = new StringTokenizer(br.readLine(), " ");*/
+
+        String[] st = br.readLine().split(" ");
 
         int sum = 0;
 
-        while (st.hasMoreTokens()) {
+        /*while (st.hasMoreTokens()) {
             int num = Integer.parseInt(st.nextToken());
+            sum += (num*num);
+        }*/
+
+        for (String s : st) {
+            int num = Integer.parseInt(s);
             sum += (num*num);
         }
 
