@@ -17,6 +17,7 @@ public class BOJ_2562 {
                 maxIdx = i;
             }
         }
+
         System.out.println(max);
         System.out.println(maxIdx);
     }
