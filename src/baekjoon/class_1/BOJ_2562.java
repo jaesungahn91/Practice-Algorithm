@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.class_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,6 +19,6 @@ public class BOJ_2562 {
         }
 
         System.out.println(max);
-        System.out.println(maxIdx);
+        System.out.println(maxIdx+1);
     }
 }
