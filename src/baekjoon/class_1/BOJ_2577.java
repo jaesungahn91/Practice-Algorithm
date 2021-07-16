@@ -3,7 +3,6 @@ package baekjoon.class_1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 // 숫자의 개수
 public class BOJ_2577 {
@@ -18,7 +17,7 @@ public class BOJ_2577 {
 
         int total = A * B * C;
 
-        int[] count = new int[9];
+        int[] count = new int[10];
 
         char[] chrArr = String.valueOf(total).toCharArray();
 
@@ -26,5 +25,8 @@ public class BOJ_2577 {
             count[Integer.parseInt(String.valueOf(chrArr[i]))] += 1;
         }
 
+        for (int c : count) {
+            System.out.println(c);
+        }
     }
 }
