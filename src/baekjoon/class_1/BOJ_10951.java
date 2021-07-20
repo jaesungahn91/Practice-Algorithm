@@ -13,6 +13,5 @@ public class BOJ_10951 {
             StringTokenizer st = new StringTokenizer(str, " ");
             System.out.println(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()));
         }
-
     }
 }
