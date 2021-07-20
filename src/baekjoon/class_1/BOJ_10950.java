@@ -1,9 +1,20 @@
 package baekjoon.class_1;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 // A+B - 3
 // https://www.acmicpc.net/problem/10950
 public class BOJ_10950 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
 
+        for (int i=0; i<T; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+            System.out.println(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()));
+        }
     }
 }
