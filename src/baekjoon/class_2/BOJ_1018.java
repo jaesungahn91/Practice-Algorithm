@@ -12,10 +12,6 @@ public class BOJ_1018 {
         int N = Integer.parseInt(NM.split(" ")[0]);
         int M = Integer.parseInt(NM.split(" ")[1]);
 
-//        for (int i = 0; i < N; i++) {
-//            for () {
-//
-//            }
-//        }
+        
     }
 }
