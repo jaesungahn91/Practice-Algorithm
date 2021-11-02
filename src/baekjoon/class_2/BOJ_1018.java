@@ -3,7 +3,6 @@ package baekjoon.class_2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 // 체스판 다시 칠하기
 public class BOJ_1018 {
