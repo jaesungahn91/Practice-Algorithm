@@ -1,5 +1,6 @@
 # Algorithm & Data Structure
 
+* LeetHub & 백준허브 사용
 * 1문제당 1커밋을 원칙으로 한다.
 * 커밋 메시지는 정해진 양식에 맞춰 작성한다.
 
