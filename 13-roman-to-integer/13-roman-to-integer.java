@@ -1,27 +1,27 @@
 class Solution {
     public int romanToInt(String s) {
         int result = 0;
-        String[] chars = s.split("");
+        String[] stringArr = s.split("");
 
-        for (int i = chars.length - 1; i >= 0; i--) {
+        for (int i = stringArr.length - 1; i >= 0; i--) {
             boolean isException = false;
 
-            if (i != chars.length - 1) {
-                switch (chars[i]) {
+            if (i != stringArr.length - 1) {
+                switch (stringArr[i]) {
                     case "I":
-                        if (chars[i + 1].equals("V") || chars[i + 1].equals("X")) {
+                        if (stringArr[i + 1].equals("V") || stringArr[i + 1].equals("X")) {
                             isException = true;
                             result -= 1;
                         }
                         break;
                     case "X":
-                        if (chars[i + 1].equals("L") || chars[i + 1].equals("C")) {
+                        if (stringArr[i + 1].equals("L") || stringArr[i + 1].equals("C")) {
                             isException = true;
                             result -= 10;
                         }
                         break;
                     case "C":
-                        if (chars[i + 1].equals("D") || chars[i + 1].equals("M")) {
+                        if (stringArr[i + 1].equals("D") || stringArr[i + 1].equals("M")) {
                             isException = true;
                             result -= 100;
                         }
@@ -30,7 +30,7 @@ class Solution {
             }
 
             if (!isException) {
-                switch (chars[i]) {
+                switch (stringArr[i]) {
                     case "I":
                         result += 1;
                         break;
@@ -55,7 +55,7 @@ class Solution {
                 }
             }
         }
-        
+
         return result;
     }
 }
