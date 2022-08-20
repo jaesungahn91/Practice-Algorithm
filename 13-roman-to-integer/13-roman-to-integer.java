@@ -1,35 +1,61 @@
 class Solution {
     public int romanToInt(String s) {
-        Map<String, Integer> romanSymbolMap = new HashMap<>();
-        romanSymbolMap.put("M", 1000);
-        romanSymbolMap.put("CM", 900);
-        romanSymbolMap.put("D", 500);
-        romanSymbolMap.put("CD", 400);
-        romanSymbolMap.put("C", 100);
-        romanSymbolMap.put("XC", 90);
-        romanSymbolMap.put("L", 50);
-        romanSymbolMap.put("XL", 40);
-        romanSymbolMap.put("X", 10);
-        romanSymbolMap.put("IX", 9);
-        romanSymbolMap.put("V", 5);
-        romanSymbolMap.put("IV", 4);
-        romanSymbolMap.put("I", 1);
+        int result = 0;
+        String[] chars = s.split("");
 
-        int answer = 0;
+        for (int i = chars.length - 1; i >= 0; i--) {
+            boolean isException = false;
 
-        for (int idx = 0; idx < s.length(); ) {
-            String twoChSubStr = s.substring(idx, Math.min(s.length(), idx + 2));
-            String oneChSubStr = s.substring(idx, idx + 1);
+            if (i != chars.length - 1) {
+                switch (chars[i]) {
+                    case "I":
+                        if (chars[i + 1].equals("V") || chars[i + 1].equals("X")) {
+                            isException = true;
+                            result -= 1;
+                        }
+                        break;
+                    case "X":
+                        if (chars[i + 1].equals("L") || chars[i + 1].equals("C")) {
+                            isException = true;
+                            result -= 10;
+                        }
+                        break;
+                    case "C":
+                        if (chars[i + 1].equals("D") || chars[i + 1].equals("M")) {
+                            isException = true;
+                            result -= 100;
+                        }
+                        break;
+                }
+            }
 
-            if (romanSymbolMap.containsKey(twoChSubStr)) {
-                answer += romanSymbolMap.get(twoChSubStr);
-                idx += 2;
-            } else {
-                answer += romanSymbolMap.get(oneChSubStr);
-                idx++;
+            if (!isException) {
+                switch (chars[i]) {
+                    case "I":
+                        result += 1;
+                        break;
+                    case "V":
+                        result += 5;
+                        break;
+                    case "X":
+                        result += 10;
+                        break;
+                    case "L":
+                        result += 50;
+                        break;
+                    case "C":
+                        result += 100;
+                        break;
+                    case "D":
+                        result += 500;
+                        break;
+                    case "M":
+                        result += 1000;
+                        break;
+                }
             }
         }
-
-        return answer;
+        
+        return result;
     }
 }
