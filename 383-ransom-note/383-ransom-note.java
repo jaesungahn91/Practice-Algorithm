@@ -1,19 +1,23 @@
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        char[] magazineArr = magazine.toCharArray();
-        List<Character> magazineList = new ArrayList<>();
-        for (char c : magazineArr) {
-            magazineList.add(c);
+        HashMap<Character, Integer> map = new HashMap<>();
+        int len = magazine.length();
+        
+        for(int i = 0; i < len; i++) {
+            char current = magazine.charAt(i);
+            map.put(current, map.getOrDefault(current, 0) + 1);
         }
-
-        char[] ransomNoteArr = ransomNote.toCharArray();
-        for (char c : ransomNoteArr) {
-            if (!magazineList.contains(c)) {
+        
+        len = ransomNote.length();
+        
+        for(int i = 0; i < len; i++) {
+            char key = ransomNote.charAt(i);
+            if(map.get(key) != null && map.get(key) > 0) {
+                map.put(key, map.get(key) - 1);
+            } else {
                 return false;
             }
-            magazineList.remove(Character.valueOf(c));
         }
-
         return true;
     }
 }
