@@ -1,4 +1,6 @@
-class Solution {
+package leetcode;
+
+class L13 {
     public int romanToInt(String s) {
         int result = 0;
         String[] stringArr = s.split("");

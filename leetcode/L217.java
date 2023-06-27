@@ -1,4 +1,10 @@
-class Solution {
+package leetcode;
+
+import java.util.HashMap;
+import java.util.Map;
+
+// 217-contains-duplicate
+class L217 {
     public boolean containsDuplicate(int[] nums) {
 
         Map<Integer, Integer> map = new HashMap<>();

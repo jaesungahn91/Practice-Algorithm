@@ -1,4 +1,7 @@
-class Solution {
+package leetcode;
+
+// 1672-richest-customer-wealth
+class L1672 {
     public int maximumWealth(int[][] accounts) {
         
         int max = 0;

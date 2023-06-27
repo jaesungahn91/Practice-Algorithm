@@ -1,4 +1,9 @@
-class Solution {
+package leetcode;
+
+import java.util.Arrays;
+
+// 1337-the-k-weakest-rows-in-a-matrix
+class L1337 {
     public int[] kWeakestRows(int[][] mat, int k) {
         int[] result = new int[k];
 

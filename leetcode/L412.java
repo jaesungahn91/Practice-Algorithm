@@ -1,4 +1,10 @@
-class Solution {
+package leetcode;
+
+import java.util.ArrayList;
+import java.util.List;
+
+// 412-fizz-buzz
+class L412 {
     public List<String> fizzBuzz(int n) {
         List<String> result = new ArrayList<>();
 

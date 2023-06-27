@@ -1,4 +1,9 @@
-class Solution {
+package leetcode;
+
+import java.util.HashMap;
+
+// 1-two-sum
+class L1 {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         int[] index = new int[2];

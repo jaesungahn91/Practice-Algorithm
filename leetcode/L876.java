@@ -1,14 +1,18 @@
+package leetcode;
+
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class leetcode.leetcode.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     leetcode.leetcode.ListNode next;
+ *     leetcode.leetcode.ListNode() {}
+ *     leetcode.leetcode.ListNode(int val) { this.val = val; }
+ *     leetcode.leetcode.ListNode(int val, leetcode.leetcode.ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+
+// 876-middle-of-the-linked-list
+class L876 {
     public ListNode middleNode(ListNode head) {
         int nodeCnt = 0;
         ListNode node = head;

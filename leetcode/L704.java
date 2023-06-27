@@ -1,4 +1,7 @@
-class Solution {
+package leetcode;
+
+// 704-binary-search
+class L704 {
     public int search(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;

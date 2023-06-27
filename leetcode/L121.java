@@ -1,4 +1,8 @@
-class Solution {
+package leetcode;
+
+// 121-best-time-to-buy-and-sell-stock
+
+class L121 {
     public int maxProfit(int[] prices) {
         int buy = prices[0];
         int sell = 0;

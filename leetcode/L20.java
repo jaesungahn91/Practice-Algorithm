@@ -1,4 +1,11 @@
-class Solution {
+package leetcode;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
+// 20-valid-parentheses
+class L20 {
     public static boolean isValid(String s) {
         Map<Character, Character> pair = new HashMap<>();
         pair.put(')', '(');

@@ -1,4 +1,7 @@
-class Solution {
+package leetcode;
+
+// 1342-number-of-steps-to-reduce-a-number-to-zero
+class L1342 {
     public int numberOfSteps(int num) {
         int step = 0;
         while (num != 0) {
