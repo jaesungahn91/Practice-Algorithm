@@ -6,8 +6,12 @@ import java.util.Arrays;
 public class L88 {
 
     public static void main(String[] args) {
-        System.out.println();
-        System.out.println();
+        int[] nums1 = {1, 2, 3, 0, 0, 0};
+        int m = 3;
+        int[] nums2 = {2, 5, 6};
+        int n = 3;
+
+        merge(nums1, m, nums2, n);
     }
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -16,6 +20,7 @@ public class L88 {
             i++;
         }
         Arrays.sort(nums1);
+        System.out.println(Arrays.toString(nums1));
     }
 
 }
